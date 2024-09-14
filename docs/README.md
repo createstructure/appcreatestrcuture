@@ -5,7 +5,7 @@
 
 ##  Description 
 Mobile app to use createstructure service
-![createstructure/app-createstructure](https://opengraph.githubassets.com/6ec5b1abbd7297ffdc265600aca87e3da72a27ab5ea084da1f0f538ed94eece9/createstructure/app-createstructure)
+![createstructure/app-createstructure](https://opengraph.githubassets.com/5d5401cc77eecebdf3d466fbfc9efe719d39a08b88e4e0c4846317e4ef38e0b4/createstructure/app-createstructure)
 ##  Class UML 
 ![Class UML](https://raw.githubusercontent.com/createstructure/app-createstructure/main/docs/app-createstructure-Class-UML.svg)
 ##  Directory structure 
