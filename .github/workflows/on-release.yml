@@ -62,7 +62,11 @@ jobs:
           echo "keyAlias=${{ secrets.ANDROID_KEY_ALIAS }}" >> android/key.properties
 
       - name: Build Android App Apk
-        run: flutter build apk
+        run: |
+          cd android
+          ./gradlew wrapper --gradle-version=8.8
+          cd ..
+          flutter build apk
 
       - name: Build Android App Bundle
         run: flutter build appbundle
