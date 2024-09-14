@@ -31,6 +31,9 @@ jobs:
       - name: Flutter version
         run: flutter --version
 
+      - name: Flutter doctor
+        run: flutter doctor --verbose
+
       - name: Gradle version
         run: gradle --version
 
