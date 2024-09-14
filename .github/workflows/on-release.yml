@@ -21,7 +21,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v1
         with:
-          java-version: '23.x'
+          java-version: '23'
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
