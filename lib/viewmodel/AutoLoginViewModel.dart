@@ -143,7 +143,7 @@ class AutoLoginViewModel extends MultipleFutureViewModel {
      */
     try {
       await _inAppBrowserWithEndingLink!.openUrlRequest(
-        urlRequest: URLRequest(url: Uri.parse(_LINK_INSERT_CODE)),
+        urlRequest: URLRequest(url: WebUri.uri(Uri.parse(_LINK_INSERT_CODE))),
         options: _appBrowserClassOptions,
       );
     } catch (_) {
