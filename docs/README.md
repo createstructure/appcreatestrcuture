@@ -5,14 +5,15 @@
 
 ##  Description 
 Mobile app to use createstructure service
-![createstructure/app-createstructure](https://opengraph.githubassets.com/5d5401cc77eecebdf3d466fbfc9efe719d39a08b88e4e0c4846317e4ef38e0b4/createstructure/app-createstructure)
+![createstructure/app-createstructure](https://opengraph.githubassets.com/4fc77e2981a050a6687d1e3841479ed58906b34db20f34dd20bc8c5923a2d5b5/createstructure/app-createstructure)
 ##  Class UML 
 ![Class UML](https://raw.githubusercontent.com/createstructure/app-createstructure/main/docs/app-createstructure-Class-UML.svg)
 ##  Directory structure 
 
 ```
 ../repo
-├── Gemfile
+├── README.md
+├── analysis_options.yaml
 ├── android
 │   ├── app
 │   │   ├── build.gradle
@@ -25,25 +26,12 @@ Mobile app to use createstructure service
 │   │       │   │   └── it
 │   │       │   │       └── castellanidavide
 │   │       │   │           └── createstructure
-│   │       │   │               └── createstructure
-│   │       │   │                   └── MainActivity.kt
+│   │       │   │               └── MainActivity.kt
 │   │       │   └── res
 │   │       │       ├── drawable
-│   │       │       │   ├── background.png
 │   │       │       │   └── launch_background.xml
-│   │       │       ├── drawable-hdpi
-│   │       │       │   └── splash.png
-│   │       │       ├── drawable-mdpi
-│   │       │       │   └── splash.png
 │   │       │       ├── drawable-v21
-│   │       │       │   ├── background.png
 │   │       │       │   └── launch_background.xml
-│   │       │       ├── drawable-xhdpi
-│   │       │       │   └── splash.png
-│   │       │       ├── drawable-xxhdpi
-│   │       │       │   └── splash.png
-│   │       │       ├── drawable-xxxhdpi
-│   │       │       │   └── splash.png
 │   │       │       ├── mipmap-hdpi
 │   │       │       │   └── ic_launcher.png
 │   │       │       ├── mipmap-mdpi
@@ -56,9 +44,7 @@ Mobile app to use createstructure service
 │   │       │       │   └── ic_launcher.png
 │   │       │       ├── values
 │   │       │       │   └── styles.xml
-│   │       │       ├── values-night
-│   │       │       │   └── styles.xml
-│   │       │       └── values-night-v31
+│   │       │       └── values-night
 │   │       │           └── styles.xml
 │   │       └── profile
 │   │           └── AndroidManifest.xml
@@ -67,8 +53,7 @@ Mobile app to use createstructure service
 │   │   └── wrapper
 │   │       └── gradle-wrapper.properties
 │   ├── gradle.properties
-│   ├── settings.gradle
-│   └── settings_aar.gradle
+│   └── settings.gradle
 ├── assets
 │   └── images
 │       ├── GitHub.png
@@ -113,9 +98,6 @@ Mobile app to use createstructure service
 │   │   │   │   ├── Icon-App-76x76@1x.png
 │   │   │   │   ├── Icon-App-76x76@2x.png
 │   │   │   │   └── Icon-App-83.5x83.5@2x.png
-│   │   │   ├── LaunchBackground.imageset
-│   │   │   │   ├── Contents.json
-│   │   │   │   └── background.png
 │   │   │   └── LaunchImage.imageset
 │   │   │       ├── Contents.json
 │   │   │       ├── LaunchImage.png
@@ -137,11 +119,13 @@ Mobile app to use createstructure service
 │   │   └── xcshareddata
 │   │       └── xcschemes
 │   │           └── Runner.xcscheme
-│   └── Runner.xcworkspace
-│       ├── contents.xcworkspacedata
-│       └── xcshareddata
-│           ├── IDEWorkspaceChecks.plist
-│           └── WorkspaceSettings.xcsettings
+│   ├── Runner.xcworkspace
+│   │   ├── contents.xcworkspacedata
+│   │   └── xcshareddata
+│   │       ├── IDEWorkspaceChecks.plist
+│   │       └── WorkspaceSettings.xcsettings
+│   └── RunnerTests
+│       └── RunnerTests.swift
 ├── l10n.yaml
 ├── lib
 │   ├── generated
@@ -181,12 +165,94 @@ Mobile app to use createstructure service
 │       ├── SettingsViewModel.dart
 │       ├── TemplateViewModel.dart
 │       └── TutorialViewModel.dart
+├── linux
+│   ├── CMakeLists.txt
+│   ├── flutter
+│   │   ├── CMakeLists.txt
+│   │   ├── generated_plugin_registrant.cc
+│   │   ├── generated_plugin_registrant.h
+│   │   └── generated_plugins.cmake
+│   ├── main.cc
+│   ├── my_application.cc
+│   └── my_application.h
+├── macos
+│   ├── Flutter
+│   │   ├── Flutter-Debug.xcconfig
+│   │   ├── Flutter-Release.xcconfig
+│   │   └── GeneratedPluginRegistrant.swift
+│   ├── Runner
+│   │   ├── AppDelegate.swift
+│   │   ├── Assets.xcassets
+│   │   │   └── AppIcon.appiconset
+│   │   │       ├── Contents.json
+│   │   │       ├── app_icon_1024.png
+│   │   │       ├── app_icon_128.png
+│   │   │       ├── app_icon_16.png
+│   │   │       ├── app_icon_256.png
+│   │   │       ├── app_icon_32.png
+│   │   │       ├── app_icon_512.png
+│   │   │       └── app_icon_64.png
+│   │   ├── Base.lproj
+│   │   │   └── MainMenu.xib
+│   │   ├── Configs
+│   │   │   ├── AppInfo.xcconfig
+│   │   │   ├── Debug.xcconfig
+│   │   │   ├── Release.xcconfig
+│   │   │   └── Warnings.xcconfig
+│   │   ├── DebugProfile.entitlements
+│   │   ├── Info.plist
+│   │   ├── MainFlutterWindow.swift
+│   │   └── Release.entitlements
+│   ├── Runner.xcodeproj
+│   │   ├── project.pbxproj
+│   │   ├── project.xcworkspace
+│   │   │   └── xcshareddata
+│   │   │       └── IDEWorkspaceChecks.plist
+│   │   └── xcshareddata
+│   │       └── xcschemes
+│   │           └── Runner.xcscheme
+│   ├── Runner.xcworkspace
+│   │   ├── contents.xcworkspacedata
+│   │   └── xcshareddata
+│   │       └── IDEWorkspaceChecks.plist
+│   └── RunnerTests
+│       └── RunnerTests.swift
 ├── pubspec.lock
 ├── pubspec.yaml
-└── test
-    └── widget_test.dart
+├── test
+│   └── widget_test.dart
+├── web
+│   ├── favicon.png
+│   ├── icons
+│   │   ├── Icon-192.png
+│   │   ├── Icon-512.png
+│   │   ├── Icon-maskable-192.png
+│   │   └── Icon-maskable-512.png
+│   ├── index.html
+│   └── manifest.json
+└── windows
+    ├── CMakeLists.txt
+    ├── flutter
+    │   ├── CMakeLists.txt
+    │   ├── generated_plugin_registrant.cc
+    │   ├── generated_plugin_registrant.h
+    │   └── generated_plugins.cmake
+    └── runner
+        ├── CMakeLists.txt
+        ├── Runner.rc
+        ├── flutter_window.cpp
+        ├── flutter_window.h
+        ├── main.cpp
+        ├── resource.h
+        ├── resources
+        │   └── app_icon.ico
+        ├── runner.exe.manifest
+        ├── utils.cpp
+        ├── utils.h
+        ├── win32_window.cpp
+        └── win32_window.h
 
-56 directories, 117 files
+72 directories, 167 files
 ```
 ##  Changelog 
 Repo where there is the mobile application to use createstructure
